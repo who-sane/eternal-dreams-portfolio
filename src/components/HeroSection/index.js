@@ -11,7 +11,7 @@ import {
   ArrowForward,
   ArrowRight,
 } from "./HeroSectionElements";
-import { Button } from "../ButtonElement";
+import { Button } from "../ButtonElements";
 
 const HeroSection = () => {
   const [hover, setHover] = useState(false);

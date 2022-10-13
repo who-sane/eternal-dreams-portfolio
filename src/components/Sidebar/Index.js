@@ -3,11 +3,12 @@ import {
   SidebarContainer,
   Icon,
   CloseIcon,
-  SidebarBtnWrap,
-  SidebarLink,
-  SidebarRoute,
   SidebarWrapper,
   SidebarMenu,
+  SidebarLink,
+  SidebarBtnWrap,
+  SidebarRoute,
+  
 } from "./SidebarElements";
 const Sidebar = ({isOpen, toggle}) => {
   return (
@@ -17,10 +18,10 @@ const Sidebar = ({isOpen, toggle}) => {
       </Icon>
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarLink to="about">About</SidebarLink>
-          <SidebarLink to="klieu">Visonary</SidebarLink>
-          <SidebarLink to="portfolio">Portfolio</SidebarLink>
-          <SidebarLink to="contact">Contact</SidebarLink>
+          <SidebarLink to="about" onClick={toggle}>About</SidebarLink>
+          <SidebarLink to="klieu" onClick={toggle}>Visonary</SidebarLink>
+          <SidebarLink to="portfolio" onClick={toggle}>Portfolio</SidebarLink>
+          <SidebarLink to="contact" onClick={toggle}>Contact</SidebarLink>
         </SidebarMenu>
         <SidebarBtnWrap>
           <SidebarRoute to="/contact">Contact</SidebarRoute>

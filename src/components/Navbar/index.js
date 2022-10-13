@@ -7,6 +7,8 @@ import {
   NavMenu,
   NavItem,
   NavLinks,
+  NavBtn,
+  NavBtnLink
 } from "./NavbarElements";
 import { FaBars } from "react-icons/fa";
 
@@ -15,7 +17,10 @@ const Navbar = () => {
     <>
       <Nav>
         <NavbarContainer>
-          <NavLogo to="/">Eternal Dreams</NavLogo>
+          <NavLogo to="/">
+            <span>Eternal Dreams&nbsp;</span>
+            <span>Kevin Lieu</span>
+          </NavLogo>
           <MobileIcon>
             <FaBars />
           </MobileIcon>
@@ -23,7 +28,16 @@ const Navbar = () => {
             <NavItem>
               <NavLinks to="about"> About </NavLinks>
             </NavItem>
+            <NavItem>
+              <NavLinks to="klieu"> Visonary </NavLinks>
+            </NavItem>
+            <NavItem>
+              <NavLinks to="portfolio"> Portfolio </NavLinks>
+            </NavItem>
           </NavMenu>
+          <NavBtn>
+            <NavBtnLink to="contact">Contact</NavBtnLink>
+          </NavBtn>
         </NavbarContainer>
       </Nav>
     </>

@@ -3,7 +3,8 @@ import Sidebar from '../components/Sidebar/Index'
 import React, {useState} from 'react'
 import HeroSection from '../components/HeroSection'
 import InfoSection from '../components/InfoSection'
-import { homeObjOne } from '../components/InfoSection/Data'
+import { homeObjOne, homeObjTwo } from '../components/InfoSection/Data'
+import Portfolio from '../components/Portfolio'
 
 const Home = () => {
 
@@ -20,6 +21,8 @@ const toggle = () => {
    <Navbar toggle={toggle} />
    <HeroSection />
    <InfoSection {...homeObjOne} />
+   <InfoSection {...homeObjTwo} />
+   <Portfolio />
    </>
   )
 }

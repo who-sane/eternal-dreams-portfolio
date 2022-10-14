@@ -5,6 +5,7 @@ import HeroSection from '../components/HeroSection'
 import InfoSection from '../components/InfoSection'
 import { homeObjOne, homeObjTwo } from '../components/InfoSection/Data'
 import Portfolio from '../components/Portfolio'
+import Footer from '../components/Footer'
 
 const Home = () => {
 
@@ -23,6 +24,7 @@ const toggle = () => {
    <InfoSection {...homeObjOne} />
    <InfoSection {...homeObjTwo} />
    <Portfolio />
+   <Footer />
    </>
   )
 }

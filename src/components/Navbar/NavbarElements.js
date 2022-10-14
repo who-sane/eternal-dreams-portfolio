@@ -3,16 +3,19 @@ import {Link as LinkRouter} from 'react-router-dom'
 import {Link as LinkScroll} from 'react-scroll'
 
 export const Nav = styled.nav`
-    background: #000;
+    background: ${({scrollNav}) => (scrollNav ? '#000' : 'transparent')};
     height: 80px;
-    /* margin-top: -80px; */
+    margin-top: -80px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1rem;
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 99;
+    transition: 0.8s;
+    overflow: hidden;
+    width: 100%;
 
     @media screen and (max-width: 960px) {
         transition: 0.8s all ease;
@@ -79,10 +82,12 @@ align-items: center;
 text-decoration: none;
 padding: 0 1rem;
 height: 100%;
-cursor: poin;
+margin-right: 20px;
+transition: 0.2s;
+cursor: pointer;
 
 &.active {
-    border-bottom: 3px solid #01bf71;
+   border-bottom: 3px solid #3a0ca3;
 }
 `;
 
@@ -97,10 +102,10 @@ export const NavBtn = styled.nav`
 
 export const NavBtnLink = styled(LinkRouter)`
 border-radius: 50px;
-background: #01bf71;
+background: #4361ee;
 white-space: nowrap;
 padding: 10px 22px;
-color: #010606;
+color: #fff;
 font-size: 16px;
 outline: none;
 border: none;
@@ -113,4 +118,21 @@ text-decoration: none;
     background: #fff;
     color: #010606;
 }
+`
+
+export const SocialIcons = styled.div`
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 240px;
+
+
+@media screen and (max-width:768px) {
+    display: none;
+}
+`
+
+export const SocialIconLink = styled.a`
+    color: #fff;
+    font-size: 24px;
 `
